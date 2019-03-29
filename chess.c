@@ -118,7 +118,7 @@ void print_chess_board() {
     short background_color;
     char chess_piece[4];
 
-    printf("\n");
+    // printf("\n");
     printf("\x1B[%dmx ", COLOR_NORMAL);
     for (int row = 0; row < AXIS; ++row) {
         printf(" %d ", row);
@@ -149,7 +149,8 @@ void print_chess_board() {
         }
         printf("\x1B[%dm\n", COLOR_NORMAL);
     }
-    printf("\n");
+    // printf("\n");
+    
 }
 
 void move_piece(int from[2], int to[2]) {
@@ -179,12 +180,12 @@ void move_piece(int from[2], int to[2]) {
 }
 
 void to_unicode_symbol(char *chess_piece, char text) {
-    if (text == QUEEN) { strcpy(chess_piece, "♛"); }
-    else if (text == KING) { strcpy(chess_piece, "♚"); }
-    else if (text == BISHOP) { strcpy(chess_piece, "♝"); }
-    else if (text == KNIGHT) { strcpy(chess_piece, "♞"); }
-    else if (text == ROCK) { strcpy(chess_piece, "♜"); }
-    else if (text == PAWN) { strcpy(chess_piece, "♟"); }
+    if (text == QUEEN) { strcpy(chess_piece, "♕"); }
+    else if (text == KING) { strcpy(chess_piece, "♔"); }
+    else if (text == BISHOP) { strcpy(chess_piece, "♗"); }
+    else if (text == KNIGHT) { strcpy(chess_piece, "♘"); }
+    else if (text == ROCK) { strcpy(chess_piece, "♖"); }
+    else if (text == PAWN) { strcpy(chess_piece, "♙"); }
     else { strcpy(chess_piece, " "); }
 }
 
@@ -237,8 +238,8 @@ short is_valid_piece_move(int from[2], int to[2]) {
                     return 1;
                 } else {
                     return 0;
-                }                
-            } else { 
+                }
+            } else {
                 return 0;
             }
         } else if (chess_piece_party == WHITE_PARTY) {
@@ -258,7 +259,7 @@ short is_valid_piece_move(int from[2], int to[2]) {
                     return 1;
                 } else {
                     return 0;
-                }                
+                }
             } else {
                 return 0;
             }
