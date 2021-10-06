@@ -24,10 +24,6 @@ Follow the steps below:
 
 ## How To Play?
 
-If you've successfully compiled and run the program, you should be seeing a chess board like in the image below:
-
-![teris game](/assets/projects/a-simple-chess-game-written-in-c/chess-board.png)
-
 This game will be played by two players: one with blue chess pieces, and red pieces for the other player. The blue player will make the first move. 
 
 Each player will take turn to select their chess piece and enter a coordinate to move the piece to. For example:
@@ -37,7 +33,5 @@ Blue select the pawn at [3, 6]: `choose piece [x][y]: 3 6`
 Blue move the pawn to [3, 4]: `move to [x][y]: 3 4` 
 
 If the move is valid, the chess piece will be moved and it would be the red player's turn to play.
-
-![teris game](/assets/projects/a-simple-chess-game-written-in-c/chess-moved.png)
 
 The players continues until one player got checkmated. 
